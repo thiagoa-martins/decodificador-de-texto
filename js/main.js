@@ -5,46 +5,46 @@ const textarea = document.querySelector("textarea");
 const p = document.querySelector("p");
 const copyButton = document.querySelector(".btn-copy");
 
-function jumpLine() {
-  document.write("<br/><br/>");
+function validateText() {
+  const text = textarea.value;
+  const textIsValid = /^[a-z]{1,}$/.test(text);
+
+  return textIsValid;
 }
 
-function show(phrase) {
-  document.write(phrase);
-  jumpLine();
-}
-
-const words = [];
+let words = [];
 
 function encryptText() {
   const text = textarea.value;
   let encryptText = "";
 
   for (let i = 0; i < text.length; i++) {
-    switch (text[i]) {
+    const letter = text[i];
+
+    switch (letter) {
       case "e":
         encryptText += "enter";
-        words.push("enter");
+        !words[i] ? words.push("enter") : null;
         break;
       case "i":
         encryptText += "imes";
-        words.push("imes");
+        !words[i] ? words.push("imes") : null;
         break;
       case "a":
         encryptText += "ai";
-        words.push("ai");
+        !words[i] ? words.push("ai") : null;
         break;
       case "o":
         encryptText += "ober";
-        words.push("ober");
+        !words[i] ? words.push("ober") : null;
         break;
       case "u":
         encryptText += "ufat";
-        words.push("ufat");
+        !words[i] ? words.push("ufat") : null;
         break;
       default:
         encryptText += text[i];
-        words.push(text[i]);
+        !words[i] ? words.push(text[i]) : null;
     }
   }
 
@@ -88,11 +88,27 @@ function showText(text) {
 }
 
 function handleCryptography() {
+  const textIsValid = validateText();
+
+  if (!textIsValid) {
+    p.textContent = "Apenas letras minúsculas e sem acento.";
+    return;
+  }
+  
+  p.textContent = "";
   const text = encryptText();
   showText(text);
 }
 
 function handleDecryption() {
+  const textIsValid = validateText();
+
+  if (!textIsValid) {
+    p.textContent = "Apenas letras minúsculas e sem acento.";
+    return;
+  }
+
+  p.textContent = "";
   const text = decripyText();
   showText(text);
 }
