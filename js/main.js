@@ -94,7 +94,7 @@ function handleCryptography() {
   if (!textIsValid) {
     return;
   }
- 
+
   initialMessage.style.display = "none";
   messageFound.style.display = "flex";
   const text = encryptText();
@@ -110,6 +110,10 @@ function handleDecryption() {
 
   const text = decripyText();
   showText(text);
+
+  words.length == 0 ? p.textContent = "Criptografe novamente." : null;
+
+  words = [];
 }
 
 function copyText() {
