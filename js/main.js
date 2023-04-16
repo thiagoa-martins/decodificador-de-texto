@@ -85,7 +85,6 @@ function decripyText() {
 
 function showText(text) {
   p.textContent = text;
-  textarea.value = "";
   textarea.focus();
 }
 
@@ -116,6 +115,10 @@ function handleDecryption() {
 function copyText() {
   const text = p.textContent;
   navigator.clipboard.writeText(text);
+  textarea.value = text;
+  p.textContent = "Texto copiado!";
+  textarea.focus();
+  decryptButton.focus();
 }
 
 textarea.focus();

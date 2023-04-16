@@ -79,6 +79,7 @@ main .wrapper .output .message-found {
   flex-direction: column;
   justify-content: space-between;
 
+  text-align: center;
   height: 100%;
   width: 100%;
 }
