@@ -2,8 +2,10 @@ const form = document.querySelector("form");
 const encryptButton = document.querySelector(".btn-encrypt");
 const decryptButton = document.querySelector(".btn-decrypt");
 const textarea = document.querySelector("textarea");
-const p = document.querySelector("p");
 const copyButton = document.querySelector(".btn-copy");
+const initialMessage = document.querySelector(".initial-message");
+const messageFound = document.querySelector(".message-found");
+const p = document.querySelector(".message-found p");
 
 function validateText() {
   const text = textarea.value;
@@ -91,11 +93,11 @@ function handleCryptography() {
   const textIsValid = validateText();
 
   if (!textIsValid) {
-    p.textContent = "Apenas letras minúsculas e sem acento.";
     return;
   }
-  
-  p.textContent = "";
+ 
+  initialMessage.style.display = "none";
+  messageFound.style.display = "flex";
   const text = encryptText();
   showText(text);
 }
@@ -104,11 +106,9 @@ function handleDecryption() {
   const textIsValid = validateText();
 
   if (!textIsValid) {
-    p.textContent = "Apenas letras minúsculas e sem acento.";
     return;
   }
 
-  p.textContent = "";
   const text = decripyText();
   showText(text);
 }

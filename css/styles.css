@@ -2,6 +2,9 @@
   font-size: 16px;
   --dark-blue-300: #0A3871;
   --white: #FFF;
+  --light-blue-100: #F3F5FC;
+  --gray-400: #495057;
+  --gray-500: #343A40;
 }
 
 * {
@@ -12,10 +15,82 @@
 
 body, html {
   height: 100%;
+  background-color: var(--light-blue-100);
 }
 
 body, input, textarea, a, button {
-  font-family: 'Inter', sans-serif;;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  height: 100%;
+  padding: 40px 40px 40px 84px;
+}
+
+main .wrapper {
+  display: flex;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+main .wrapper .output {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  width: 400px;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+main .wrapper .output .initial-message {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+main .wrapper .output .initial-message img {
+  width: 100%;
+}
+
+main .wrapper .output .initial-message h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--gray-500);
+  margin-bottom: 1rem;
+}
+
+main .wrapper .output .initial-message p {
+  color: var(--gray-400);
+}
+
+main .wrapper .output .message-found {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 100%;
+}
+
+main .wrapper .output .message-found p {
+  font-size: 1.5rem;
+  color: var(--gray-400);
+  line-height: 36px;
+}
+
+main .wrapper .output .message-found .btn-copy {
+  width: 100%;
 }
 
 a {
@@ -26,7 +101,7 @@ button {
   padding: 1.5rem;
   border-radius: 1.5rem;
   border: 1px solid var(--dark-blue-300);
-  width: 100%;
+  width: 328px;
 }
 
 button, a {
@@ -38,29 +113,59 @@ button:hover, a:hover {
   filter: brightness(.9);
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-width: 680px;
+  margin: 80px 80px 32px 124px;
+}
+
 form textarea {
   font-size: 2rem;
   color: var(--dark-blue-300);
+  background-color: var(--light-blue-100);
   resize: none;
   border: none;
   outline: none;
+  height: 288px;
+  line-height: 48px;
 }
 
 form textarea::placeholder {
   opacity: 1;
 }
 
-form .btn-encrypt {
+form div .info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 1rem;
+}
+form div .info span {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+form .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+form div .btn-encrypt {
   background-color: var(--dark-blue-300);
   color: var(--white);
 }
 
-form .btn-decrypt, .btn-copy {
-  background-color: var(--white);
+form div .btn-decrypt {
   color: var(--dark-blue-300);
+  background-color: var(--light-blue-100);
 }
 
-div .btn-copy {
+main div .btn-copy {
   background-color: var(--white);
   color: var(--dark-blue-300);
 }

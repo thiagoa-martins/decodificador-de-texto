@@ -17,14 +17,31 @@
 <body>
   <main>
     <img src="/images/logo.png" alt="Logo">
-    <form>
-      <textarea placeholder="Digite um texto"></textarea>
-      <button class="btn-encrypt">Criptografar</button>
-      <button class="btn-decrypt">Descriptografar</button>
-    </form>
-    <div>
-     <p></p> 
-     <button class="btn-copy">Copiar</button>
+    <div class="wrapper">
+      <form>
+        <textarea placeholder="Digite seu texto"></textarea>
+        <div>
+          <div class="info">
+            <img src="/images/info.png" alt="Info">
+            <span>Apenas letras minúsculas e sem acento.</span>
+          </div>
+          <div class="buttons">
+            <button class="btn-encrypt">Criptografar</button>
+            <button class="btn-decrypt">Descriptografar</button>
+          </div>
+        </div>
+      </form>
+      <div class="output">
+        <div class="initial-message">
+          <img src="/images/high-quality-products.svg" alt="High quality products">
+          <h1>Nenhuma mensagem encontrada</h1>
+          <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+        <div class="message-found">
+          <p></p>
+          <button class="btn-copy">Copiar</button>
+        </div>
+      </div>
     </div>
   </main>
   <script src="./js/main.js"></script>
