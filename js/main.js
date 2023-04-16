@@ -59,7 +59,7 @@ function decripyText() {
   for (let i = 0; i < words.length; i++) {
     switch (words[i]) {
       case "enter":
-        words[i] = "a";
+        words[i] = "e";
         break;
       case "imes":
         words[i] = "i";
