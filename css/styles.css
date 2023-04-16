@@ -128,7 +128,7 @@ form textarea {
   background-color: var(--light-blue-100);
   resize: none;
   border: none;
-  outline: none;
+  outline: 1px solid var(--light-blue-100);
   height: 288px;
   line-height: 48px;
 }
