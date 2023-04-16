@@ -9,7 +9,7 @@ const p = document.querySelector(".message-found p");
 
 function validateText() {
   const text = textarea.value;
-  const textIsValid = /^[a-z\ ]{1,}$/.test(text);
+  const textIsValid = /^[a-z\,\.\ ]{1,}$/.test(text);
 
   return textIsValid;
 }
