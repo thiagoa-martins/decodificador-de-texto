@@ -1,0 +1,66 @@
+:root {
+  font-size: 16px;
+  --dark-blue-300: #0A3871;
+  --white: #FFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body, input, textarea, a, button {
+  font-family: 'Inter', sans-serif;;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--dark-blue-300);
+  width: 100%;
+}
+
+button, a {
+  cursor: pointer;
+  transition: filter .2s;
+}
+
+button:hover, a:hover {
+  filter: brightness(.9);
+}
+
+form textarea {
+  font-size: 2rem;
+  color: var(--dark-blue-300);
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+form textarea::placeholder {
+  opacity: 1;
+}
+
+form .btn-encrypt {
+  background-color: var(--dark-blue-300);
+  color: var(--white);
+}
+
+form .btn-decrypt, .btn-copy {
+  background-color: var(--white);
+  color: var(--dark-blue-300);
+}
+
+div .btn-copy {
+  background-color: var(--white);
+  color: var(--dark-blue-300);
+}
