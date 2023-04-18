@@ -1,8 +1,8 @@
 :root {
   font-size: 16px;
-  --dark-blue-300: #0A3871;
-  --white: #FFF;
-  --light-blue-100: #F3F5FC;
+  --primary: #15803d;
+  --green-50: #f0fdf4;
+  --secondary: #dcfce7;
   --gray-400: #495057;
   --gray-500: #343A40;
 }
@@ -15,7 +15,7 @@
 
 body, html {
   height: 100%;
-  background-color: var(--light-blue-100);
+  background-color: var(--secondary);
 }
 
 body, input, textarea, a, button {
@@ -47,10 +47,12 @@ main .wrapper .output {
   height: 100%;
   width: 400px;
   padding: 2rem;
-  background-color: var(--white);
+  background-color: var(--green-50);
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: 400;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
 }
 
 main .wrapper .output .initial-message {
@@ -101,8 +103,10 @@ a {
 button {
   padding: 1.5rem;
   border-radius: 1.5rem;
-  border: 1px solid var(--dark-blue-300);
+  border: 2px solid var(--primary);
   width: 328px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 button, a {
@@ -125,11 +129,11 @@ form {
 
 form textarea {
   font-size: 2rem;
-  color: var(--dark-blue-300);
-  background-color: var(--light-blue-100);
+  color: var(--primary);
+  background-color: var(--secondary);
   resize: none;
   border: none;
-  outline: 1px solid var(--light-blue-100);
+  outline: 1px solid var(--secondary);
   height: 288px;
   line-height: 48px;
 }
@@ -139,14 +143,15 @@ form textarea::placeholder {
 }
 
 form div .info {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 8px;
 
   margin-bottom: 1rem;
 }
 form div .info span {
-  font-size: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: var(--gray-400);
 }
 
@@ -157,16 +162,16 @@ form .buttons {
 }
 
 form div .btn-encrypt {
-  background-color: var(--dark-blue-300);
-  color: var(--white);
+  background-color: var(--primary);
+  color: var(--green-50);
 }
 
 form div .btn-decrypt {
-  color: var(--dark-blue-300);
-  background-color: var(--light-blue-100);
+  color: var(--primary);
+  background-color: var(--secondary);
 }
 
 main div .btn-copy {
-  background-color: var(--white);
-  color: var(--dark-blue-300);
+  background-color: var(--green-50);
+  color: var(--primary);
 }

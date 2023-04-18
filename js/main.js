@@ -6,6 +6,7 @@ const copyButton = document.querySelector(".btn-copy");
 const initialMessage = document.querySelector(".initial-message");
 const messageFound = document.querySelector(".message-found");
 const p = document.querySelector(".message-found p");
+const info = document.querySelector(".info");
 
 function validateText() {
   const text = textarea.value;
@@ -92,6 +93,11 @@ function handleCryptography() {
   const textIsValid = validateText();
 
   if (!textIsValid) {
+    info.style.display = "flex";
+
+    setTimeout(() => {
+      info.style.display = "none";
+    }, 2000)
     return;
   }
 
